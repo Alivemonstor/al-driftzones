@@ -23,7 +23,7 @@ RegisterNetEvent('al-driftzone:loadleaderboard', function()
     local data = MySQL.query.await('SELECT * FROM drift_leaderboard ORDER BY driftpoints DESC;')
     
     local leaderboard = {}
-    leaderboard[#leaderboard + 1] = { 
+    leaderboard[1] = { 
         isMenuHeader = true,
         header = 'Leaderboard',
         icon = 'fas fa-list'
